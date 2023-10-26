@@ -7,8 +7,8 @@ use log::info;
 use nostr_sdk::Keys as NostrKeys;
 use nym_sdk::mixnet::MixnetMessageSender;
 use std::error::Error;
-use std::path::PathBuf;
-use url::Url;
+
+
 
 mod config;
 mod nymstr;
@@ -28,7 +28,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let our_address = *nymstr.nym_client.nym_address();
     info!(target: "nym-client", "Our client nym address is: {our_address}");
 
-    let sender = nymstr.nym_client.split_sender();
+    let _sender = nymstr.nym_client.split_sender();
 
     let receiving_task_handle = tokio::spawn(async move {
         while let Some(received) = nymstr.nym_client.next().await {

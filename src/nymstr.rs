@@ -3,7 +3,7 @@ use nostr_sdk::prelude::Client as NostrClient;
 use nostr_sdk::prelude::Keys as NostrKeys;
 use nym_sdk::mixnet;
 use nym_sdk::mixnet::MixnetMessageSender;
-use nym_sdk::NymNetworkDetails;
+
 use std::error::Error;
 use std::path::PathBuf;
 
