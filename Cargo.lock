@@ -2444,21 +2444,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "nostr-nym-rs"
-version = "0.1.0"
-dependencies = [
- "clap",
- "env_logger 0.10.0",
- "futures",
- "log",
- "nostr-sdk",
- "nym-bin-common",
- "nym-sdk",
- "tokio",
- "url",
-]
-
-[[package]]
 name = "nostr-sdk"
 version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3380,6 +3365,21 @@ dependencies = [
  "nym-mixnet-contract-common",
  "serde",
  "thiserror",
+]
+
+[[package]]
+name = "nymstr"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "env_logger 0.10.0",
+ "futures",
+ "log",
+ "nostr-sdk",
+ "nym-bin-common",
+ "nym-sdk",
+ "tokio",
+ "url",
 ]
 
 [[package]]
