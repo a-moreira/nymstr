@@ -8,8 +8,6 @@ use nostr_sdk::Keys as NostrKeys;
 use nym_sdk::mixnet::MixnetMessageSender;
 use std::error::Error;
 
-
-
 mod config;
 mod nymstr;
 
@@ -37,6 +35,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
             nymstr.nostr_client.publish_text_note(msg, &[]).await;
         }
 
+        // TODO catch ctrl+C handler and disconnect inside of it
         nymstr.nym_client.disconnect().await;
     });
 
